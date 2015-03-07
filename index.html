@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang=en>
+  <meta charset=utf-8>
+  <title>Awesome Github Projects</title>
+  <link rel=stylesheet href=build.css>
+
+  <main>
+    <header>
+      Awesome Github Projects
+      <small>check them out</small>
+    </header>
+
+    <section>
+      <h1>Application Frameworks</h1>
+      <ul>
+        <li data-repo=lhorie/mithril.js>Mithril</li>
+        <li data-repo=facebook/react>React</li>
+      </ul>
+    </section>
+
+    <section>
+      <h1>Flow Control</h1>
+      <ul>
+        <li data-repo=caolan/async>Async</li>
+        <li data-repo=tj/co>co</li>
+        <li data-repo=petkaantonov/bluebird>Bluebrid</li>
+      </ul>
+    </section>
+
+    <section>
+      <h1>Guides</h1>
+      <ul>
+        <li data-repo=bendc/frontend-guidelines>Frontend Guidelines</li>
+        <li data-repo=braziljs/js-the-right-way>JavaScript The Right Way> 
+      </ul>
+    </section>
+
+    <section>
+      <h1>UI Frameworks</h1>
+      <ul>
+        <li data-repo=johnotander/furtive>furtive</li>
+        <li data-repo=amorey/mui>MUI</li>
+        <li data-repo=alexanderGugel/papier>papier</li>
+        <li data-repo=uikit/uikit>uikit</li>
+        <li data-repo=Semantic-Org/Semantic-UI>Semantic-UI</li>
+      </ul>
+    </section>
+
+    <section>
+      <h1>UI Elements</h1>
+      <ul>
+        <li data-repo=Pathgather/please-wait>PleaseWait.js</li>
+        <li data-repo=t4t5/sweetalert>SweetAlert</li>
+      </ul>
+    </section>
+
+    <section>
+      <h1>Utilities</h1>
+      <ul>
+        <li data-repo=rauchg/ms.js>ms.js</li>
+        <li data-repo=lodash/lodash>Lodash</li>
+      </ul>
+    </section>
+
+    <section>
+      <h1>Web Frameworks</h1>
+      <ul>
+        <li data-repo=strongloop/express>express</li>
+        <li data-repo=koajs/koa>koa</li>
+        <li data-repo=gorilla/mux>Gorilla mux</li>
+      </ul>
+    </section>
+  </main>
+
+  <template id=repository-tpl>
+    <a href=${url} target=_blank>
+      <article>
+          <header>
+            ${name}
+          </header>
+          ${description}
+      </article>
+    </a>
+  </template>
+  <script src=build.js></script>
+</html>
