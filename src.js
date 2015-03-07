@@ -128,16 +128,14 @@ var Cache = (function() {
    */
 
   cache.exists = function(key) {
-    return this.expired(key) ? false : !!localStorage[this._prefix + key];
+    return !!localStorage[this._prefix + key] && !this._expired(JSON.parse(localStorage[this._prefix + key]));
   }
 
   /**
-   * @param  {String}
+   * @param  {Object}
    * @return {Boolean}
    */
-  cache.expired = function(key) {
-    var obj = this.get(key);
-
+  cache._expired = function(obj) {
     return this._expireAfter <= 0 ? false : !obj.__timestamp || (obj && Date.now() > obj.__timestamp + this._expireAfter * 1000);
   }
 
